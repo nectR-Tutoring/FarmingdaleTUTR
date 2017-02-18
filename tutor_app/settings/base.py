@@ -80,7 +80,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = '{{ tutor_app }}.wsgi.application'
+WSGI_APPLICATION = 'tutor_app.wsgi.application'
 
 
 # Database
@@ -89,7 +89,7 @@ WSGI_APPLICATION = '{{ tutor_app }}.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '{{ tutor_app }}',
+        'NAME': 'fto_tutr',
         'USER': '',
         'PASSWORD': '',
         'HOST': '',  # Set to empty string for localhost.
