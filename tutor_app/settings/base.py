@@ -62,7 +62,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = '{{ tutor_app }}.urls'
+ROOT_URLCONF = 'tutor_app.urls'
 
 TEMPLATES = [
     {
@@ -137,7 +137,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'core/static')
 
 # Additional locations of static files
 STATICFILES_DIRS = [
@@ -161,10 +161,9 @@ STATICFILES_FINDERS = [
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'core/media')
 
-
-EMAIL_SUBJECT_PREFIX = '[{{ tutor_app }}] '
+EMAIL_SUBJECT_PREFIX = 'FTO_TUTR_APP'
 
 INTERNAL_IPS = ['127.0.0.1', '10.0.2.2']
 
