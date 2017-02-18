@@ -1,3 +1,4 @@
 /.vagrant
 /static
 *.pyc
+/fto_tutr/settings/local.py
