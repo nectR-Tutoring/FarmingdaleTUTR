@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'django.contrib.admindocs',
 
     'core',
-    'tutor_app',
 ]
 
 MIDDLEWARE_CLASSES = [
