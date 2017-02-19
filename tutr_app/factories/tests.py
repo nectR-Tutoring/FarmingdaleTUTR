@@ -1,6 +1,8 @@
 # BDD Factories testing file
-from tutr_app.factories.user import User
 from django.test import TestCase
+from passlib.hash import django_pbkdf2_sha256
+
+from tutr_app.factories.user import User
 
 
 class TestUserFactory(TestCase):
@@ -30,6 +32,8 @@ class TestUserFactory(TestCase):
         self.assertIsNotNone(user.email)
 
     def test_create_user_with_password(self):
-        user = User(password='password')
+        password = 'password'
+        user = User(password=password)
 
-        self.assertEquals(user.password, 'password')
+        self.assertIsNot(user.password, 'password')
+        assert (django_pbkdf2_sha256.verify(password, user.password))
