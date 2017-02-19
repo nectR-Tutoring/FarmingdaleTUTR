@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE_CLASSES = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -201,3 +202,6 @@ LOGGING = {
         },
     }
 }
+
+# Django Debug Toolbar Explicit Setup
+DEBUG_TOOLBAR_PATCH_SETTINGS = False

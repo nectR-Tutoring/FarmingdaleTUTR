@@ -16,6 +16,9 @@
     <orderEntry type="jdk" jdkName="Remote Python 3.4.3 Vagrant VM at C:\Users\BrandonFox\PycharmProjects\FTO (/home/vagrant/.virtualenvs/fto_tutr/bin/python)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+  <component name="PyBDDFrameworkConfig">
+    <option name="preferedFrameworkName" value="behave" />
+  </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
     <option name="TEMPLATE_FOLDERS">
