@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -23,7 +24,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 SECRET_KEY = '{{ secret_key }}'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Is Turned on or off in dev and production
+# DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -35,6 +37,8 @@ ADMINS = [
 # Application definition
 
 INSTALLED_APPS = [
+    # Testable apps go before BDD
+    'core',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,8 +51,6 @@ INSTALLED_APPS = [
 
     # Enable admin documentation:
     'django.contrib.admindocs',
-
-    'core',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -63,7 +65,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'tutor_app.urls'
+ROOT_URLCONF = 'tutr_app.urls'
 
 TEMPLATES = [
     {
@@ -81,7 +83,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'tutor_app.wsgi.application'
+WSGI_APPLICATION = 'tutr_app.wsgi.application'
 
 
 # Database
@@ -124,7 +126,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-gb'
 
-TIME_ZONE = 'Europe/London'
+TIME_ZONE = 'America/New_York'
 
 USE_I18N = True
 

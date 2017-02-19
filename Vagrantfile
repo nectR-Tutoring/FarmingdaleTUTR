@@ -32,4 +32,9 @@ Vagrant::Config.run do |config|
 	
 	# Enable provisioning with a shell script.
 	config.vm.provision :shell, :path => "etc/install/install.sh", :args => "fto_tutr"
+
+	# Install PhantomJS
+    # TODO Add check if PhantomJS is already installed
+    # TODO Only install if DEV...Maybe?
+    config.vm.provision :shell, :path => "etc/install/install_phantomjs.sh"
 end

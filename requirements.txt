@@ -1,3 +1,6 @@
+selenium
+factory_boy
+behave
 appdirs==1.4.0
 cffi==1.9.1
 cryptography==1.7.2
