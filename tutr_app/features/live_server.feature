@@ -3,6 +3,3 @@ Feature: Live server
   As the Maintainer
   I want to send an HTTP request
 
-  Scenario: HTTP GET /
-    When I visit "/"
-    Then I should see "Behave Django works"

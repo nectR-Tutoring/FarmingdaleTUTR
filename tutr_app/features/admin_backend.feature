@@ -1,18 +1,24 @@
 # Created by BrandonFox at 2/18/2017
-Feature: Admin User can Log In to Admin Backend
+Feature: Admin Backend
   # Description of feature
   As an admin user
-  I should be able to log into {{Domain Name}}/admin
-  and be greeted with the admin user panel
+  I want to be able to log into /admin/
+  So that I can administer server
+
+  Background: Set server address, create admin user and setup database
+    Given I am an Administrator
+    And I am using server "http://127.0.0.1:8000"
+
 
 #  Scenario: Access Admin Login Page
 #    Given I access the URL "/admin"
 #    Then I see the admin login
 
   Scenario: An Administrator User Attempts to Login
-    Given I am an Admin User
-    When I log in
-    Then Login is a Success
+    When I visit "/admin/"
+    And I enter Administrator Username and Password
+    Then Login is Success
+    And I am redirected to Admin Backend
 
  # Scenario: Non-Admin Login Attempt
  #   Given I am on URL "/admin"
