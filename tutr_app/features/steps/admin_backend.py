@@ -1,5 +1,7 @@
 from behave import given, when, then, use_step_matcher, step
 
+from tutr_app.factories.user import User
+
 use_step_matcher("parse")
 
 
@@ -8,7 +10,7 @@ def step_impl(context):
     """
     :type context: behave.runner.Context
     """
-    pass
+    context.test_admin_user = User(is_superuser=True)
 
 
 @step(u'I am using server "{url}"')
@@ -17,7 +19,7 @@ def step_impl(context, url):
     :param url:
     :type context: behave.runner.Context
     """
-    context.server_url = url
+    context.config.server_url = url
 
 
 @when('I visit "{login_page}"')
@@ -26,7 +28,8 @@ def step_impl(context, login_page):
     :param login_page: /admin/
     :type context: behave.runner.Context
     """
-    context.response = context.test.client.get(context.server_url + login_page)
+    context.browser.visit(context.config.server_url + login_page)
+
 
 
 @step("I enter Administrator Username and Password")
