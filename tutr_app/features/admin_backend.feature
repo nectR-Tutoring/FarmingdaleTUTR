@@ -9,16 +9,15 @@ Feature: Admin Backend
     Given I am an Administrator
     And I am using server "http://127.0.0.1:8000"
 
-
-#  Scenario: Access Admin Login Page
-#    Given I access the URL "/admin"
-#    Then I see the admin login
-
   Scenario: An Administrator User Attempts to Login
     When I visit "/admin/"
     And I enter Administrator Username and Password
     Then Login is Success
     And I am redirected to Admin Backend
+
+#  Scenario: Access Admin Login Page
+#    Given I access the URL "/admin"
+#    Then I see the admin login
 
  # Scenario: Non-Admin Login Attempt
  #   Given I am on URL "/admin"

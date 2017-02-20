@@ -11,6 +11,7 @@ def step_impl(context):
     :type context: behave.runner.Context
     """
     context.test_admin_user = User(is_superuser=True)
+    assert context.test_admin_user.is_superuser
 
 
 @step(u'I am using server "{url}"')
