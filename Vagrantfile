@@ -37,4 +37,8 @@ Vagrant::Config.run do |config|
     # TODO Add check if PhantomJS is already installed
     # TODO Only install if DEV...Maybe?
     config.vm.provision :shell, :path => "etc/install/install_phantomjs.sh"
+
+    # One last update for good measure
+    config.vm.provision :shell,
+        inline: "apt-get update"
 end
