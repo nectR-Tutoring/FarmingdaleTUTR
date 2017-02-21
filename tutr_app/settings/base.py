@@ -33,7 +33,6 @@ ADMINS = [
     ('Brandon Fox', 'foxb@farmingdale.edu'),
 ]
 
-
 # Application definition
 
 INSTALLED_APPS = [

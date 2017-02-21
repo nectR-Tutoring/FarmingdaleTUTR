@@ -3,3 +3,6 @@ Feature: Live server
   As the Maintainer
   I want to send an HTTP request
 
+  Scenario: Visit all URLs in App
+
+

@@ -1,6 +1,6 @@
 from behave import given, when, then, use_step_matcher, step
 
-from tutr_app.factories.user import User
+from tutr_app.features.factories.user import UserFactory
 
 use_step_matcher("parse")
 
@@ -10,7 +10,7 @@ def step_impl(context):
     """
     :type context: behave.runner.Context
     """
-    context.test_admin_user = User(is_superuser=True)
+    context.test_admin_user = UserFactory(is_superuser=True)
     assert context.test_admin_user.is_superuser
 
 

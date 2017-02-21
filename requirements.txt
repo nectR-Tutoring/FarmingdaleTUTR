@@ -1,3 +1,4 @@
+passlib
 splinter
 selenium
 factory_boy
