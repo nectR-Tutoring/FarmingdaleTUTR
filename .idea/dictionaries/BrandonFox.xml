@@ -1,8 +1,16 @@
 <component name="ProjectDictionaryState">
   <dictionary name="BrandonFox">
     <words>
+      <w>createdb</w>
+      <w>createuser</w>
+      <w>freetype</w>
+      <w>gitignore</w>
+      <w>littlecms</w>
+      <w>pgsql</w>
+      <w>postgresql</w>
       <w>tutr</w>
       <w>virtualenvs</w>
+      <w>workon</w>
     </words>
   </dictionary>
 </component>

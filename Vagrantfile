@@ -22,16 +22,16 @@ Vagrant::Config.run do |config|
 	
 	# Forward a port from the guest to the host, which allows for outside
 	# computers to access the VM, whereas host only networking does not.
-	config.vm.forward_port 8000, 8000
+	config.vm.forward_port 8000, 8080
 
 	#TODO Should make "fto_tutr" a variable and have it pull from the Django setup files
 	# Share an additional folder to the guest VM. The first argument is
 	# an identifier, the second is the path on the guest to mount the
 	# folder, and the third is the path on the host to the actual folder.
-	config.vm.share_folder "project", "/home/vagrant/fto_tutr", "."
+	config.vm.share_folder "project", "/home/vagrant/nectr", "."
 	
 	# Enable provisioning with a shell script.
-	config.vm.provision :shell, :path => "etc/install/install.sh", :args => "fto_tutr"
+	config.vm.provision :shell, :path => "etc/install/install.sh", :args => "nectr"
 
 	# Install PhantomJS
     # TODO Add check if PhantomJS is already installed

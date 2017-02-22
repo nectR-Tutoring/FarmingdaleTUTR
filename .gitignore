@@ -2,3 +2,4 @@
 /static
 *.pyc
 /fto_tutr/settings/local.py
+/nectr/settings/local.py
