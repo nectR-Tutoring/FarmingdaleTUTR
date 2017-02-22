@@ -46,7 +46,7 @@ if [[ ! -f /usr/local/bin/virtualenv ]]; then
 fi
 
 # bash environment global setup
-# cp -p ${PROJECT_DIR}/etc/install/bashrc /home/vagrant/.bashrc
+cp -p ${PROJECT_DIR}/etc/install/bashrc /home/vagrant/.bashrc
 
 # ---
 
